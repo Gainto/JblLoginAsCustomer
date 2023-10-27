@@ -20,3 +20,7 @@ composer require jbl/login-as-customer-shopware6
 ### Download & install the latest release
 - Download the latest release and install it via the plug-in manager
 
+## Screenshots
+
+![Button on Detail Page](https://shopware.jeffblock.de/plugins/JblLoginAsCustomer/images/1.png)
+![Login Sales-Channel selection](https://shopware.jeffblock.de/plugins/JblLoginAsCustomer/images/2.png)
