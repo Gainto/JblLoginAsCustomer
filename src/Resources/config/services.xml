@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- Admin Proxy -->
+        <service id="JblLoginAsCustomer\Api\AdminLoginActionController">
+
+            <tag name="controller.service_arguments"/>
+
+            <argument type="service" id="Shopware\Core\Checkout\Customer\SalesChannel\AccountService"/>
+            <argument type="service" id="Shopware\Core\System\SalesChannel\Context\SalesChannelContextFactory"/>
+            <argument type="service" id="customer.repository"/>
+
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+
+        <!-- Storefront Controller-->
+        <service id="JblLoginAsCustomer\Storefront\Controller\AdminLoginController">
+
+            <tag name="controller.service_arguments"/>
+
+            <argument type="service" id="Shopware\Core\System\SalesChannel\Context\SalesChannelContextPersister"/>
+            <argument type="service" id="Shopware\Core\Checkout\Customer\SalesChannel\AccountService"/>
+
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+    </services>
+</container>

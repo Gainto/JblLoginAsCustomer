@@ -1,0 +1,25 @@
+{% block sw_customer_list_grid_columns_actions_delete %}
+    {% parent() %}
+
+    {% block sw_customer_list_grid_columns_actions_login %}
+        <sw-context-menu-item
+                class="sw-customer-list__login-action"
+                variant="success"
+                @click="onShowLoginModal(item.id)"
+        >
+            {{ $tc('jbl-login-as-customer.buttonLg') }}
+        </sw-context-menu-item>
+    {% endblock %}
+{% endblock %}
+
+{% block sw_customer_list_delete_modal %}
+    {% parent() %}
+
+    {% block sw_customer_list_login_modal %}
+        <sw-customer-login-modal
+            v-if="loginCustomerId"
+            @close="onCloseLoginModal"
+            :customerId="loginCustomerId"
+        ></sw-customer-login-modal>
+    {% endblock %}
+{% endblock %}

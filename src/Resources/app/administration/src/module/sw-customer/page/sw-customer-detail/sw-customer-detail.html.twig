@@ -1,0 +1,27 @@
+{% block sw_customer_detail_actions_edit %}
+
+    {% block sw_customer_detail_actions_login %}
+        <sw-button
+                class="sw-customer-detail__open-login-action"
+                variant="ghost"
+                :disabled="isLoading"
+                @click.prevent="onShowLoginModal(customerId)"
+        >
+            {{ $tc('jbl-login-as-customer.buttonLg') }}
+        </sw-button>
+    {% endblock %}
+
+    {% parent() %}
+{% endblock %}
+
+{% block sw_customer_detail_content_view %}
+    {% parent() %}
+
+    {% block sw_customer_detail_content_view_login_modal %}
+        <sw-customer-login-modal
+                v-if="loginCustomerId"
+                @close="onCloseLoginModal"
+                :customerId="loginCustomerId"
+        ></sw-customer-login-modal>
+    {% endblock %}
+{% endblock %}

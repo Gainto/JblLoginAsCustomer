@@ -1,0 +1,11 @@
+{
+  "jbl-login-as-customer": {
+    "buttonLg": "Als Kunde anmelden",
+    "buttonSm": "Anmelden",
+    "infoMessage": "Der shop öffnet sich in einem neuen Fenter. Bitte stelle sicher, dass Pop-Ups erlaubt sind.",
+    "modalTitle" : "Verkaufskanal auswählen",
+    "gridTitleSalesChannel" : "Verkaufskanal",
+    "gridTitleDomain" : "Domain",
+    "gridTitleAction" : "Action"
+  }
+}

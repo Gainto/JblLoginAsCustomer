@@ -1,0 +1,11 @@
+{
+  "jbl-login-as-customer": {
+    "buttonLg": "Login as customer",
+    "buttonSm": "Login",
+    "infoMessage": "The storefront will open in a new window. Please make sure to allow popups.",
+    "modalTitle" : "Select Sales-Channel",
+    "gridTitleSalesChannel" : "Sales-Channel",
+    "gridTitleDomain" : "Domain",
+    "gridTitleAction" : "Action"
+  }
+}

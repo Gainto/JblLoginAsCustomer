@@ -1,0 +1,50 @@
+{% block sw_customer_login_modal %}
+<sw-modal
+        :title="$tc('jbl-login-as-customer.modalTitle')"
+        @modal-close="onClose"
+>
+
+    {% block sw_customer_login_modal_content %}
+
+    {% block sw_customer_login_modal_content_notification %}
+        <sw-alert variant="info">
+            {{ $tc('jbl-login-as-customer.infoMessage') }}
+        </sw-alert>
+    {% endblock %}
+
+        {% block sw_customer_login_modal_content_grid %}
+            <sw-data-grid
+                    ref="salesChannelGrid"
+                    class="sw-customer-login-modal-sales-channel-grid"
+                    :dataSource="salesChannels"
+                    :columns="salesChannelGridColumns"
+                    :showSelection="false"
+                    :isLoading="isLoading"
+                    :compactMode="true"
+                    :showActions="false"
+            >
+
+                <template #column-id="{ item }">
+                    <sw-button size="small" variant="primary" @click="onLogin(item.id, item.domains.first().url)" :isLoading="loginLoading == item.id">
+                        {{ $tc('jbl-login-as-customer.buttonSm') }}
+                    </sw-button>
+                </template>
+
+            </sw-data-grid>
+        {% endblock %}
+    {% endblock %}
+
+    {% block sw_customer_login_modal_footer %}
+    <template slot="modal-footer">
+
+        {% block sw_customer_login_modal_footer_btn_close %}
+            <sw-button size="small" @click="onClose">
+                Close
+            </sw-button>
+
+        {% endblock %}
+    </template>
+    {% endblock %}
+
+</sw-modal>
+{% endblock %}

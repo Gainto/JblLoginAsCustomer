@@ -1,0 +1,54 @@
+{
+  "name": "jbl/login-as-customer-shopware6",
+  "description": "Simple Plug-In which allows the admin to login as a customer",
+  "type": "shopware-platform-plugin",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Jeffry Block",
+      "homepage": "https://www.jeffblock.de"
+    }
+  ],
+  "require": {
+    "shopware/core": "~6.5.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "~3.0",
+    "phpstan/phpstan": "^0.12.18"
+  },
+  "scripts": {
+    "cs-fixer": "php-cs-fixer fix",
+    "phpstan": "phpstan analyse"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "JblLoginAsCustomer\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "JblLoginAsCustomer\\JblLoginAsCustomer",
+    "copyright": "(c) by Jeffry Block",
+    "label": {
+      "de-DE": "Als Kunde einloggen",
+      "en-GB": "Login as customer"
+    },
+    "description": {
+      "de-DE": "Einfaches Plug-In welches es dem Administrator erlaubt, sich als Kunden einzuloggen",
+      "en-GB": "Simple Plug-In which allows the admin to login as a customer"
+    },
+    "manufacturerLink": {
+      "de-DE": "https://github.com/gainto",
+      "en-GB": "https://github.com/gainto"
+    },
+    "supportLink": {
+      "de-DE": "https://github.com/gainto",
+      "en-GB": "https://github.com/gainto"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "symfony/runtime": true
+    }
+  }
+}
