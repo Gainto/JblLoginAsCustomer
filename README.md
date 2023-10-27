@@ -11,7 +11,7 @@ You can either log-in from within the customer-listing or the customer detail pa
 
 ### Install via composer:
 ```bash
-composer require jbl/login-as-customer
+composer require jbl/login-as-customer-shopware6
 ```
 
 ### Install via GIT
